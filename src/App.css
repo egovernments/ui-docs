@@ -1,5 +1,22 @@
-.App {
+/* .App {
   text-align: center;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f6fbff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0b0c0c;
+}
+p,
+li {
+  color: #0b0c0c;
 }
 
 .App-logo {
@@ -36,3 +53,47 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-logo {
+  width: 132px;
+}
+.home_banner {
+  width: 537px;
+}
+/* Components and sidebar */
+.components_item {
+  width: calc(100% - 14rem);
+  height: auto;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+.custom-shadow {
+  border-radius: 24px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.input-shadow {
+  border-radius: 7px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+.navbar_shadow {
+  box-shadow: 0px -8px 25px rgba(0, 0, 0, 0.25);
+}
+.active_class {
+  width: 5rem;
+  height: auto;
+  background-color: red;
+  color: yellow;
+}
+@media screen and (max-width: 768px) {
+  .components_item {
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+}
+/* Components and sidebar */
+/* Component Button */
+.components_button2 {
+  background: #f47738;
+  box-shadow: inset 0px -2px 0px #0b0c0c;
+}
+/* Component Button */
