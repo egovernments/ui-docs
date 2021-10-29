@@ -19,8 +19,25 @@ const Panel = () => {
             </div>
             <div className="pb-4">
                 <Card className="py-4 flex items-center">
-                    <img src={PanelSuccessImg} alt="Panel Success"  className="w-1/2" />
-                    <img src={PanelErrorImg} alt="Panel Error"  className="w-1/2 ml-8" />
+                    <div className="w-80 bg-panel_success flex justify-items-center items-center flex-col py-5">
+                        <h2 className="text-3xl text-white font-bold">Success Message</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#F47738" className="w-10 h-10 my-4 rounded-full">
+                            <path d="M0 0h24v24H0z" fill="#fff" />
+                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" fill="#00703C" />
+                        </svg>
+                        <p className="text-white text-lg">Reference No.</p>
+                        <p className="text-white text-2xl">KA22922-28282</p>
+                    </div>
+                    <div className="w-80 bg-panel_error flex justify-items-center items-center flex-col py-5 ml-8">
+                        <h2 className="text-3xl text-white font-bold">Failure Message</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d4351c" className="w-10 h-10 my-4 rounded-full">
+                            <path d="M0 0h24v24H0V0z" fill="#fff" />
+                            <circle cx="12" cy="19" r="2" />
+                            <path d="M10 3h4v12h-4z" />
+                        </svg>
+                        <p className="text-white text-lg">Reference No.</p>
+                        <p className="text-white text-2xl">KA22922-28282</p>
+                    </div>
                 </Card>
             </div>
             <div className="pb-4">

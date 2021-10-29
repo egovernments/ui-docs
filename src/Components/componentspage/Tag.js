@@ -16,7 +16,10 @@ const Tag = () => {
             </div>
             <div className="pb-4">
                 <Card className="py-4">
-                    <img src={TagImg} alt="Tag" className="w-1/2" />
+                    <div className="flex">
+                        <span className="tagInactive">Inactive</span>
+                        <span className="tagActive ml-8">Active</span>
+                    </div>
                 </Card>
             </div>
             <div className="pb-4">

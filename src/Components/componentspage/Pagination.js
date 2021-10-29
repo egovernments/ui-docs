@@ -1,6 +1,7 @@
 import { Card, Header, RadioButtons } from '@egovernments/digit-ui-react-components'
 import React from 'react'
 import PaginationImg from "../../assets/img/components/Pagination.png"
+import PaginationComponent from "../common/Pagination"
 
 const Pagination = () => {
     const availableOptions = [
@@ -22,7 +23,7 @@ const Pagination = () => {
             </div>
             <div className="pb-4">
                 <Card className="py-4">
-                    <img src={PaginationImg} alt="Pagination" className="w-1/2" />
+                <PaginationComponent />
                 </Card>
             </div>
             <div className="pb-4">

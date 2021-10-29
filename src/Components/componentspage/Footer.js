@@ -3,10 +3,10 @@ import React from 'react'
 import FooterImg from "../../assets/img/components/Footer.png"
 
 const Footer = () => {
-    const menuItems =[
+    const menuItems = [
         {
-            id : 1,
-            heading : "city"
+            id: 1,
+            heading: "city"
         }
     ]
     return (

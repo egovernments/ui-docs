@@ -1,6 +1,7 @@
 import { Card, Header } from '@egovernments/digit-ui-react-components'
 import React from 'react'
 import SummaryListImg from "../../assets/img/components/SummaryList.png"
+import SummaryListTable from '../common/SummaryListTable'
 
 const SummaryList = () => {
     return (
@@ -15,10 +16,8 @@ const SummaryList = () => {
                     information on the screen.
                 </p>
             </div>
-            <div className="pb-4">
-                <Card className="py-4">
-                    <img src={SummaryListImg} alt="Summary List" className="w-1/2" />
-                </Card>
+            <div className="p-5 tableCard">
+                <SummaryListTable />
             </div>
             <div className="pb-4">
                 <h2 className="sm:text-xl font-bold">Guidelines</h2>
