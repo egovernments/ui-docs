@@ -1,6 +1,5 @@
-import { Banner, Card, Header, InfoBanner } from '@egovernments/digit-ui-react-components'
+import { Card, Header } from '@egovernments/digit-ui-react-components'
 import React from 'react'
-import NotificationBannerImg from "../../assets/img/components/NotificationBanner.png"
 
 const NotificationBanner = () => {
     return (
@@ -19,8 +18,11 @@ const NotificationBanner = () => {
             </div>
             <div className="pb-4">
                 <Card className="py-4">
-                    {/* <Banner /> */}
-                    <img src={NotificationBannerImg} alt="Notification Banner" />
+                    <div className="WhatsNewCard">
+                        <h2>Property Tax</h2>
+                        <p>Pay your Property Tax Dues before 31st March and get 10% rebate</p>
+                        <p>1 day ago</p>
+                    </div>
                 </Card>
             </div>
             <div className="pb-4">

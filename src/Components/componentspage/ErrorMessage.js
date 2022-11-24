@@ -1,9 +1,9 @@
-import { Card, CardLabelError, FormStep, Header } from "@egovernments/digit-ui-react-components";
+import { Card, Header } from "@egovernments/digit-ui-react-components";
 import React from "react";
 import ErrorMessageImg from "../../assets/img/components/ErrorMessage.png"
 
 const ErrorMessage = () => {
-  const onSelect=()=>{
+  const onSelect = () => {
     console.log("hello")
   }
   return (
@@ -21,7 +21,15 @@ const ErrorMessage = () => {
         </p>
       </div>
       <Card className="py-4">
-      <img src={ErrorMessageImg} alt="Error Message" className="w-1/2" />
+        <div className="w-80 bg-error_message_bg p-4 m-sm p-md">
+          <div className="flex mb-4">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="#D4351C" />
+            </svg>
+            <h2 className="text-xl text-red-700 ml-2 font-bold">Error</h2>
+          </div>
+          <p className="text-panel_error whitespace-pre-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+        </div>
       </Card>
       <div className="sm:w-3/5 w-full py-4">
         <h2 className="2xl:text-3xl xl:text-3xl md:text-2xl sm:text-lg font-bold">

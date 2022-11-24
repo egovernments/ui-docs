@@ -14,43 +14,15 @@ import SufixImg from "../../assets/img/components/Sufix.png"
 const TextInputs = () => {
   const [inputName, setInputName] = useState("");
   const [number, setNumber] = useState(false);
+  const [password, setPassword] = useState()
   const [errorCode, setErrorCode] = useState(false);
   const handleChange = (e) => {
-    setInputName(e.target.value);
-  };
+    setInputName(e.target.value)
+  }
   return (
     <div className="md:w-5/6 w-full mb-60">
       <div className="mb-4">
         <Header>Text Input</Header>
-        {/* <Card
-          className="px-3 py-5 cursor-pointer"
-        >
-          <form>
-            <div className="flex flex-col">
-              <Label>Name</Label>
-              <TextInput
-                className="text-base"
-                onChange={handleChange}
-                value={inputName}
-              />
-            </div>
-          </form>
-            <div className="py-4 flex justify-between items-start bg-codebg">
-              <div className="text-text_input_code">
-                <p className="text-text_input_code py-2 text-xs">
-                  <span className="text-banner_bg font-bold">import</span>
-                  {` React from 'react';`}
-                </p>
-                <p className="text-text_input_code py-2 text-xs">
-                  <span className="text-banner_bg font-bold">import</span>{" "}
-                  Textfield from '@atlaskit/textfield';
-                </p>
-                <p className="text-text_input_code py-2 text-xs">{`export default function TextFieldDefaultExample() {`}</p>
-                <p className="text-text_input_code py-2 text-xs">{`return <Textfield name="basic" aria-label="default text field" />;`}</p>
-                <p className="text-text_input_code py-2 text-xs">{`}`}</p>
-              </div>
-            </div>
-        </Card> */}
       </div>
       <div className="content_main">
         <div className="sm:w-3/5 w-full py-4">
@@ -71,7 +43,7 @@ const TextInputs = () => {
                 <TextInput
                   className="text-base"
                   onChange={handleChange}
-                  placeholder="+91 "
+                  value={inputName}
                 />
               </div>
             </div>
@@ -147,12 +119,14 @@ const TextInputs = () => {
               <div className="flex flex-col w-1/2">
                 <Label>Password</Label>
                 <TextInput
-                  className="text-base"
-                  onChange={handleChange}
-                  placeholder="+91 "
+                  type="password"
+                  className="text-base passwordSmall"
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="*******"
+                  value={password}
                 />
               </div>
-              <small>
+              <small className="pt-0">
                 The password Must be atleast 8 characters long
               </small>
             </div>
@@ -180,12 +154,26 @@ const TextInputs = () => {
         <Card
           className="px-3 py-5 cursor-pointer"
         >
-          <img src={PrefixImg} alt="prefix" className="w-1/2" /> <br />
-          <img src={SufixImg} alt="Sufix" className="w-1/2" /> 
+          <form>
+            <div className="py-4">
+              <Label>Phone No.</Label>
+              <div className="prefix">
+                <span>+91</span>
+                <TextInput userType="text" className="w-1/2" />
+              </div>
+            </div>
+            <div className="py-4">
+              <Label>Weight</Label>
+              <div className="sufix">
+                <TextInput userType="text" className="w-1/2" />
+                <span>Kg</span>
+              </div>
+            </div>
+          </form>
         </Card>
         <div className="sm:w-3/5 w-full py-4">
           <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
-          Error Messages
+            Error Messages
           </h3>
         </div>
         <Card
@@ -195,18 +183,18 @@ const TextInputs = () => {
           <form>
             <div className="flex flex-col w-1/2">
               <TextInput
-                className="text-base border-red-400"
+                className="text-base passwordSmall"
                 userType="text"
               />
               <small className="text-xs text-red-400">
-              Enter Name
+                Enter Name
               </small>
             </div>
           </form>
-          </Card>
+        </Card>
         <div className="sm:w-3/5 w-full py-4">
           <p className="2xl:text-lg sm:text-sm pb-4">
-          Follow the text input specifications given below for showing error messages on the screen.
+            Follow the text input specifications given below for showing error messages on the screen.
           </p>
           <p className="2xl:text-lg sm:text-sm">Use the error message list below for specific error messages, styles, and formats.</p>
         </div>

@@ -1,8 +1,13 @@
-import React from "react";
-import { Card, Header } from "@egovernments/digit-ui-react-components";
+import React, { useState } from "react";
+import { Card, Header, TopBar } from "@egovernments/digit-ui-react-components";
 import HeaderImg from "../../assets/img/components/Header.png"
 
 const HeaderComponents = () => {
+  const [isSidebarOpen, toggleSidebar] = useState(false);
+  const logoUrl = "https://qa.digit.org/egov-dev-assets/mseva-logo-white.png";
+  const handleLogout =()=>{
+    console.log("logout")
+  }
   return (
     <div className="md:w-5/6 w-full mb-60">
       <div className="mb-4">
@@ -17,7 +22,13 @@ const HeaderComponents = () => {
       </div>
       <div className="pb-4">
         <Card className="py-4">
-          <img src={HeaderImg} alt="Header" className="w-1/2" />
+          {/* <img src={HeaderImg} alt="Header" className="w-1/2" /> */}
+          <TopBar
+            toggleSidebar={toggleSidebar}
+            isSidebarOpen={isSidebarOpen}
+            handleLogout={handleLogout}
+            logoUrl={logoUrl}
+          />
         </Card>
       </div>
       <div className="pb-4">

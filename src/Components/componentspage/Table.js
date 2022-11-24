@@ -1,8 +1,10 @@
 import { Card, Header } from '@egovernments/digit-ui-react-components'
 import React from 'react'
 import TableImg from "../../assets/img/components/Table.png"
+import ReactTable from '../common/ReactTable'
 
 const Tables = () => {
+
     return (
         <div className="md:w-5/6 w-full mb-60">
             <div className="pb-2">
@@ -14,10 +16,8 @@ const Tables = () => {
                     The Table component makes it easier to sort information for users.
                 </p>
             </div>
-            <div className="pb-4">
-                <div className="py-4">
-                    <img src={TableImg} alt="Table"  />
-                </div>
+            <div className="p-5 tableCard">
+                <ReactTable />
             </div>
             <div className="pb-4">
                 <h2 className="sm:text-xl font-bold">Guidelines</h2>

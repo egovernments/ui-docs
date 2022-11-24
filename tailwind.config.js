@@ -25,7 +25,10 @@ module.exports = {
       'input_border' : '#505A5F',
       'text_input_code' : '#0B4B66',
       'codebg' : "#FAFAFA",
-      'card_button_bg' : "#EEEEEE"
+      'card_button_bg' : "#EEEEEE",
+      'error_message_bg' : "#efc7c1",
+      'panel_success' : "#00703C",
+      'panel_error' : "#D4351C"
     },
     extend: {},
   },
@@ -34,3 +37,4 @@ module.exports = {
   },
   plugins: [],
 }
+

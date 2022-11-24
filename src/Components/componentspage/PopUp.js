@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import PopUpImg from "../../assets/img/components/PopUp.png"
 
 const PopUps = () => {
-    const [showPopUp, setShowPopUp] = useState(false);
+    const [showPopUp, setShowPopUp] = useState(true);
 
     return (
         <div className="md:w-5/6 w-full mb-60">
@@ -18,19 +18,18 @@ const PopUps = () => {
             </div>
             <div className="pb-4">
                 <Card className="py-4">
-                    <img src={PopUpImg} alt="popup" className="w-1/2" /> <br />
-                    
                     <div className="pb-2">
                         <ButtonSelector label="show PopUp" onSubmit={() => setShowPopUp(!showPopUp)} />
                         {
                             showPopUp && <PopUp>
-                                <div className="popup-module">
+                                <div className="popup-module rounded">
                                     <HeaderBar
-                                        main="This is Pop Up"
-                                        end={<button onClick={() => setShowPopUp(false)}>X</button>}
+                                        main={<h2 className="p-4 text-2xl font-bold">Title</h2>}
+                                        end={<button onClick={() => setShowPopUp(false)} className="bg-input_border text-2xl text-white p-4">X</button>}
                                     />
-                                    <div className="popup-module-main">
-                                        <img src="https://via.placeholder.com/912x568" />
+                                    <div className="mt-24 mb-4 text-right mr-4">
+                                        <button className="mr-5 bg-placeholder_color px-6 h-8 border-b border-black border-solid">Button</button>
+                                        <ButtonSelector label="Button" />
                                     </div>
                                 </div>
                             </PopUp>
