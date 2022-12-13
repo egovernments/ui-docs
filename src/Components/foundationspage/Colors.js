@@ -1,6 +1,7 @@
 import { Header } from "@egovernments/digit-ui-react-components";
 import React from "react";
-import colorsItem from "./ColorsItem";
+import colorPalette from "../../assets/img/colorPalette.png"
+
 
 const isMobile = window.innerWidth < 768;
 const Colors = () => {
@@ -60,7 +61,10 @@ const Colors = () => {
         </p>
         <p>{` Use the colour function reference <digit-colour> to fetch the specified colour from the palette directly. For instance, use the code <digit-colour-green> .`}</p>
       </div>
-      <div className="grid grid-cols-6 gap-4">
+
+      <img  src={colorPalette} alt="branding" />
+      
+      {/* <div className="grid grid-cols-6 gap-4">
         {colorsItem.map((data) => {
           return (
             <div className="p-4 flex flex-col h-32" style={{background: `${data.bgstyle}`}} key={data.id}>
@@ -71,7 +75,7 @@ const Colors = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

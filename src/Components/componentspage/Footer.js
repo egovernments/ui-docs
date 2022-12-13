@@ -1,6 +1,7 @@
-import { Card, Header, NavBar } from '@egovernments/digit-ui-react-components'
+import {  Header, NavBar } from '@egovernments/digit-ui-react-components'
 import React from 'react'
 import FooterImg from "../../assets/img/all_fresh/Footer.png"
+import Card from '../common/Card';
 
 const Footer = () => {
     const isMobile = window.innerWidth < 768;
