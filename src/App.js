@@ -75,6 +75,7 @@ import ApplicationStatus from "./Components/patterns/ApplicationStatus";
 import EmployeeDashboard from "./Components/patterns/EmployeeDashboard";
 import EmployeeInbox from "./Components/patterns/EmployeeInbox";
 import Report from "./Components/patterns/Report";
+import Footer from "./Components/componentspage/Footer";
 // import { Body, TopBar } from "@egov/digit-ui-react-components"; // for component use
 
 function App() {
@@ -489,10 +490,13 @@ function App() {
           <Route  path="/ui-docs/resources/resource">
             <ResourcesOnePage />
           </Route>
-
+    
           <Redirect to="/ui-docs/" /> 
           {/* Redirect if switch doesn't match with any of the above Routes */}
         </Switch>
+     <div className="bg-indigo-500 pb-4 text-center">
+      <h3 className="text-center">All content on this page by eGov Foundation is licensed under a Creative Commons Attribution 4.0 International License.</h3>
+     </div>
       </Router>
     </>
   );

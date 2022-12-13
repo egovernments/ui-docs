@@ -20,6 +20,7 @@ import notificationImg from '../../assets/img/foundations/iconography/notificati
 import imageImg from '../../assets/img/foundations/iconography/image.jpg'
 import fileImg from '../../assets/img/foundations/iconography/file.jpg'
 import contentImg from '../../assets/img/foundations/iconography/content.jpg'
+import { Link } from "react-router-dom";
 
 const isMobile = window.innerWidth < 768;
 const Iconography = () => {
@@ -31,9 +32,10 @@ const Iconography = () => {
       <div className="pb-4">
         <h2 className="sm:text-xl font-bold">Overview</h2>
         <p className="md:text-xs lg:text-sm 2xl:text-base">
-          Icons in the DIGIT act as visual aids to help merchants complete
-          tasks. They’re simple, informative, and build on the visual language
-          of the design system.
+        Icons in the DIGIT act as visual aids to help users complete tasks.  We are using the amazing     <Link 
+                    to='//mui.com/material-ui/material-icons/' 
+                    className="text-border xl:text-base md:text-sm sm:text-xs flex items-center "target="_blank" 
+                  >  Google Material icon library </Link>
         </p>
       </div>
       {/* <div className="grid grid-cols-2 gap-4">
