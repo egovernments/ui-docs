@@ -14,6 +14,11 @@ const FoundationsSidebarItems =[
         item : 'Iconography',
         linkpath : '/ui-docs/foundations/iconography'
     },
+    {
+        id : 4,
+        item : 'Accessibility',
+        linkpath : '/ui-docs/foundations/accessibility'
+    }
 ]
 
 export default FoundationsSidebarItems;

@@ -29,16 +29,16 @@ const SidebarData = [
     item: "Error Message",
     linkpath: "/ui-docs/components/error-message",
   },
-  {
-    id: 7,
-    item: "Error Summary",
-    linkpath: "/ui-docs/components/error-summary",
-  },
-  {
-    id: 8,
-    item: "Field Set",
-    linkpath: "/ui-docs/components/field-set",
-  },
+  // {
+  //   id: 7,
+  //   item: "Error Summary",
+  //   linkpath: "/ui-docs/components/error-summary",
+  // },
+  // {
+  //   id: 8,
+  //   item: "Field Set",
+  //   linkpath: "/ui-docs/components/field-set",
+  // },
   {
     id: 9,
     item: "File Upload",
@@ -119,16 +119,12 @@ const SidebarData = [
     item: "Text Input",
     linkpath: "/ui-docs/components/text-input",
   },
-  {
-    id: 25,
-    item: "Text Area",
-    linkpath: "/ui-docs/components/text-area",
-  },
-  {
-    id: 26,
-    item: "Warning Text",
-    linkpath: "/ui-docs/components/warning-text",
-  },
+  // {
+  //   id: 25,
+  //   item: "Text Area",
+  //   linkpath: "/ui-docs/components/text-area",
+  // },
+  // ,
   {
     id: 27,
     item: "Side Nav",

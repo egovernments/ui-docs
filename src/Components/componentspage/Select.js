@@ -1,18 +1,21 @@
 import { Card, Header, SectionalDropdown } from '@egovernments/digit-ui-react-components'
 import React from 'react'
+import Select1Img from "../../assets/img/all_fresh/Select1.png"
+import Select2Img from "../../assets/img/all_fresh/Select2.png"
 
+const isMobile = window.innerWidth < 768;
 const Select = () => {
     const cityData = [{heading:"head 1",options:[{city:"a"}]},{heading:"head 2",options:[{city:"b"}]}]
     const onSelectEmployee = () => {
         console.log("Hello");
       };
     return (
-        <div className="md:w-5/6 w-full mb-60">
+        <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
             <div className="pb-2">
                 <Header>Select</Header>
             </div>
             <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Overview</h2>
+                <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">Overview</h2>
                 <p className="md:text-xs lg:text-sm 2xl:text-base">
                     The Select component provides the users with the option to choose the relevant input from
                     the list of available options. This component is mostly used in user input forms and collect
@@ -21,20 +24,10 @@ const Select = () => {
             </div>
             <div className="pb-4">
                 <Card className="py-4">
-                    <SectionalDropdown
-                        selected="selectedEmployee"
-                        menuData={cityData}
-                        displayKey="city"
-                        select={onSelectEmployee}
-                    />
+                    <img src={Select1Img} alt="select1" className="w-1/2" />
+                    <br />
+                    <img src={Select2Img} alt="Select2" className="w-1/2" />
                 </Card>
-            </div>
-            <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Guidelines</h2>
-                <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    The guidelines below provide the key design principles that define the use of this element in
-                    DIGIT screens and applications to ensure visual consistency.
-                </p>
             </div>
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">

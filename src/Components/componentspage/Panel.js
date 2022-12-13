@@ -1,35 +1,28 @@
 import { Card, Header, SubmitBar } from '@egovernments/digit-ui-react-components'
 import React from 'react'
-import PanelSuccessImg from "../../assets/img/components/PanelSuccess.png"
-import PanelErrorImg from "../../assets/img/components/PanelError.png"
-
+import PanelSuccessImg from "../../assets/img/all_fresh/PanelSuccess.png"
+import PanelErrorImg from "../../assets/img/all_fresh/PanelError.png"
+const isMobile = window.innerWidth < 768;
 const Panel = () => {
     return (
-        <div className="md:w-5/6 w-full mb-60">
+        <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
             <div className="pb-2">
                 <Header>Panel</Header>
             </div>
             <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Overview</h2>
+                <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">Overview</h2>
                 <p className="md:text-xs lg:text-sm 2xl:text-base">
                     The Panel component is used as placeholders to display confirmation on specific user
                     actions completed successfully. The text and information in the panel provide the users
                     with the content on specific status and details on the completed actions.
                 </p>
             </div>
-            <div className="pb-4">
-                <Card className="py-4 flex items-center">
-                    <img src={PanelSuccessImg} alt="Panel Success"  className="w-1/2" />
-                    <img src={PanelErrorImg} alt="Panel Error"  className="w-1/2 ml-8" />
-                </Card>
-            </div>
-            <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Guidelines</h2>
-                <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    The following guidelines provide details on how to use this component and the prescribed
-                    design guidelines.
-                </p>
-            </div>
+            <Card className="py-4">
+                <div className="flex items-center">
+                    <img src={PanelSuccessImg} alt="Panel Success" className="w-1/2" />
+                    <img src={PanelErrorImg} alt="Panel Error" className="w-1/2 ml-2" />
+                </div>
+            </Card>
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
                     When to Apply

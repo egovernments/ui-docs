@@ -1,64 +1,49 @@
 import { Card, Header } from '@egovernments/digit-ui-react-components'
 import React from 'react'
-import SideNavImg from "../../assets/img/components/SideNav.png"
+import SideNavImg from "../../assets/img/all_fresh/SideNav.png"
+import SideNavImgA from "../../assets/img/all_fresh/SideNavA.png"
+import SideNavImgB from "../../assets/img/all_fresh/SideNavB.png"
 
+const isMobile = window.innerWidth < 768;
 const SideNav = () => {
     return (
-        <div className="md:w-5/6 w-full mb-60">
+        <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
             <div className="pb-2">
                 <Header>Side Nav</Header>
             </div>
             <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Overview</h2>
+                <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">Overview</h2>
                 <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    The Tag component is used to display the status of specific user actions.
+                    The Side Nav component provides users with access to the system menu and navigation options. It can be used for single or multiple levels of navigation.
                 </p>
             </div>
-            <div className="pb-4">
-                <div className="py-4">
-                    <img src={SideNavImg} alt="Side Nav" className="w-1/2" />
+            <Card className="py-4">
+            <div className="flex items-center">
+                <img style={{height:"46vw"}}  src={SideNavImg}  alt="Side Nav" className="w-10 " />
+                <img style={{height:"46vw"}} src={SideNavImgA}  alt="Side NavA" className="w-45 ml-20"/>
+                <img style={{height:"46vw"}} src={SideNavImgB}  alt="Side NavB" className="w-45 ml-20"/>
                 </div>
-            </div>
-            <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Guidelines</h2>
-                <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    Use the component design guideline below to ensure visual consistency across the
-                    platform.
-                </p>
-            </div>
+            </Card>
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
                     When to Apply
                 </h3>
                 <p className="2xl:text-lg sm:text-sm">
-                    The error message component should be displayed when there is an input validation error.
-                    Any other messages should follow the standard message format.
+                    The Side Nav component on the DIGIT UI screens appears on the left side.
                 </p>
-            </div>
-            <div className="sm:w-3/5 w-full py-4">
-                <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
-                    When not to Apply
-                </h3>
-                <p className="2xl:text-lg sm:text-sm">
-                    Do not use the error message component while users are typing or move to a different field
-                    or tab. The error message should provide the next step that the user should take. It should
-                    also provide the users with a way to leave the transaction instead of blocking the navigation.                </p>
             </div>
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
                     How to Apply
                 </h3>
                 <ul className="list-outside list-disc pl-4">
-                    <li className="py-2">The error message should appear in red after the question or hint text</li>
-                    <li className="py-2">Use a red border to provide a visual indication of where the error occurred - for instance,
-                        if the user entered an invalid date range, the date field is highlighted within a red border
-                        along with the error message</li>
-                    <li className="py-2">Make sure the error message is displayed in plain, simple and concise language. </li>
-                    <li className="py-2">Do not use technical jargon in the error message.</li>
-                    <li className="py-2">Use consistent message formats across the application to avoid confusion and reduce
-                        cognitive load on users</li>
-                    <li className="py-2">Use specific message text to make it relevant and helpful</li>
-                    <li className="py-2">Provide clear instructions and brief descriptions on what is required and the next steps</li>
+                    <li className="py-2">This component is visible at all times to allow easy navigation access to users.</li>
+                    <li className="py-2">Make use of single or multiple levels of menu options to guide users across the application.</li>
+                    <li className="py-2">The icons on the side nav should be reflective of the menu options and not just merely used for decoration.</li>
+                    <li className="py-2">Ensure the width of the side nav is enough to cover the menu text without making it appear too condensed</li>
+                    <li className="py-2">Apply the sentence case (first letter capitalized) rule across the side nav.</li>
+                    <li className="py-2">Use icons only for the first level hierarchy items.</li>
+                    <li className="py-2">Avoid deep nesting for menu lists.</li>
                 </ul>
             </div>
         </div>

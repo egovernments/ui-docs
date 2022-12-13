@@ -15,7 +15,6 @@ const Data = [
     heading: "Brand",
     text: "Brand visualization is all about the consistent use of colours, patterns, and components.......",
     linkText: "Explore our Brand",
-    imgWidth : '64px',
     link : '/ui-docs/brand'
   },
   {
@@ -24,7 +23,6 @@ const Data = [
     heading: "Foundations",
     text: '"Keep it Simple" is the central theme guiding the DIGIT platform design principles....',
     linkText: "Explore our Foundations",
-    imgWidth : '49px',
     link : '/ui-docs/foundations'
   },
   {
@@ -33,7 +31,6 @@ const Data = [
     heading: "Components",
     text: "A complete guide to use and apply the various visual components used on the DIGIT platform.....",
     linkText: "Explore our Components",
-    imgWidth : '64px',
     link : '/ui-docs/components'
   },
   {
@@ -42,7 +39,6 @@ const Data = [
     heading: "Content",
     text: "Standardized content layouts, fonts, templates define the basic framework for .....",
     linkText: "Explore our Content",
-    imgWidth : '48px',
     link : '/ui-docs/content'
   },
   {
@@ -51,7 +47,6 @@ const Data = [
     heading: "Patterns",
     text: "A deep dive into the patterns used across the platform, design solutions for defined....",
     linkText: "Explore our Patterns",
-    imgWidth : '53px',
     link : '/ui-docs/patterns'
   },
   {
@@ -60,7 +55,6 @@ const Data = [
     heading: "Resources",
     text: "Access design resources, links, and media for standardized application design.....",
     linkText: "Explore our Resources",
-    imgWidth : '53px',
     link : '/ui-docs/resources'
   },
 ];
@@ -78,7 +72,6 @@ const HomeContent = () => {
               text={item.text}
               linkContent={item.linkText}
               link ={item.link}
-              imgWidth = {{width : item.imgWidth}}
             />
           );
         })}

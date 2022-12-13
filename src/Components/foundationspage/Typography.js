@@ -20,6 +20,7 @@ import { desktopData, mobileData } from "./TypographyItem";
 
 const Typography = () => {
   const [showOptions, setShowOptions] = useState(false);
+  const isMobile = window.innerWidth < 768;
   const handleClick = () => {
     setShowOptions(false);
   };
@@ -41,7 +42,7 @@ const Typography = () => {
   ];
 
   return (
-    <div className="md:w-5/6 w-full mb-60">
+    <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
       <div className="pb-2">
         <Header>Typography</Header>
       </div>

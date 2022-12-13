@@ -1,13 +1,14 @@
-import { Card, CardLabelError, FormStep, Header } from "@egovernments/digit-ui-react-components";
+import { Card, FormStep, Header } from "@egovernments/digit-ui-react-components";
 import React from "react";
-import ErrorMessageImg from "../../assets/img/components/ErrorMessage.png"
+import AlertImg from "../../assets/img/all_fresh/Alert.png"
 
 const ErrorMessage = () => {
+  const isMobile = window.innerWidth < 768;
   const onSelect=()=>{
     console.log("hello")
   }
   return (
-    <div className="md:w-5/6 w-full mb-60">
+    <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
       <div className="mb-4">
         <Header>Error Message</Header>
       </div>
@@ -21,17 +22,8 @@ const ErrorMessage = () => {
         </p>
       </div>
       <Card className="py-4">
-      <img src={ErrorMessageImg} alt="Error Message" className="w-1/2" />
+      <img src={AlertImg} alt="error" className="w-1/2" />
       </Card>
-      <div className="sm:w-3/5 w-full py-4">
-        <h2 className="2xl:text-3xl xl:text-3xl md:text-2xl sm:text-lg font-bold">
-          Guidelines
-        </h2>
-        <p className="2xl:text-lg sm:text-sm">
-          Use the component design guideline below to ensure visual consistency
-          across the platform.
-        </p>
-      </div>
       <div className="sm:w-3/5 w-full py-4">
         <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
           When to Apply
@@ -58,9 +50,6 @@ const ErrorMessage = () => {
           How to Apply
         </h3>
         <ul className="list-outside list-disc pl-4">
-          <li className="py-2">
-            Position checkboxes to the left of the text labels
-          </li>
           <li className="py-2">
             {" "}
             The error message should appear in red after the question or hint

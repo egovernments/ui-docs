@@ -1,32 +1,27 @@
 import { Card, Header } from '@egovernments/digit-ui-react-components'
 import React from 'react'
+import Tab from "../../assets/img/all_fresh/Tab.png"
 
+const isMobile = window.innerWidth < 768;
 const Tabs = () => {
     return (
-        <div className="md:w-5/6 w-full mb-60">
+        <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
             <div className="pb-2">
                 <Header>Tabs</Header>
             </div>
             <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Overview</h2>
+                <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">Overview</h2>
                 <p className="md:text-xs lg:text-sm 2xl:text-base">
                     The Tab component allows users to navigate through different sections and view one
                     section at a time. This component is very useful to display related categories of content
                     without having to leave or navigate to another page.
                 </p>
             </div>
-            <div className="pb-4">
-                <Card className="py-4">
-
-                </Card>
-            </div>
-            <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Guidelines</h2>
-                <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    Use the design guidelines below to ensure visual consistency in the design and use of tabs
-                    across DIGIT screens and applications.
-                </p>
-            </div>
+            <Card>
+                <div className="pb-4 flex space-x-8">
+                    <img src={Tab} alt="Inset Text" className="w-1/2" />
+                </div>
+            </Card>
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
                     When to Apply

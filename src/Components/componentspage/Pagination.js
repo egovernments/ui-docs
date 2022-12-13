@@ -1,19 +1,20 @@
 import { Card, Header, RadioButtons } from '@egovernments/digit-ui-react-components'
 import React from 'react'
-import PaginationImg from "../../assets/img/components/Pagination.png"
+import PaginationImg from "../../assets/img/all_fresh/Pagination.png"
 
+const isMobile = window.innerWidth < 768;
 const Pagination = () => {
     const availableOptions = [
         { code: "ASSIGNED_TO_ME", name: `${("ES_INBOX_ASSIGNED_TO_ME")} (0)` },
         { code: "ASSIGNED_TO_ALL", name: `${("ES_INBOX_ASSIGNED_TO_ALL")} ` },
       ];
     return (
-        <div className="md:w-5/6 w-full mb-60">
+        <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
             <div className="pb-2">
                 <Header>Pagination</Header>
             </div>
             <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Overview</h2>
+                <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">Overview</h2>
                 <p className="md:text-xs lg:text-sm 2xl:text-base">
                     The Pagination component is used to divide content into distinct pages. It allows users to
                     navigate to specific pages with ease. This prevents the users from getting overwhelmed
@@ -22,15 +23,8 @@ const Pagination = () => {
             </div>
             <div className="pb-4">
                 <Card className="py-4">
-                    <img src={PaginationImg} alt="Pagination" className="w-1/2" />
+                    <img src={PaginationImg} alt="pagination" className="w-1/2" />
                 </Card>
-            </div>
-            <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Guidelines</h2>
-                <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    Follow the below guidelines to match the Pagination component design with established
-                    DIGIT design standards.
-                </p>
             </div>
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">

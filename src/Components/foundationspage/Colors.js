@@ -2,9 +2,10 @@ import { Header } from "@egovernments/digit-ui-react-components";
 import React from "react";
 import colorsItem from "./ColorsItem";
 
+const isMobile = window.innerWidth < 768;
 const Colors = () => {
   return (
-    <div className="md:w-5/6 w-full mb-60">
+    <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "190%"} : {}}>
       <div className="pb-2">
         <Header>Colors</Header>
       </div>

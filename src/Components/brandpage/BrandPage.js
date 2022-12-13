@@ -5,9 +5,11 @@ import MissionImg from "../../assets/img/brand/mission.png";
 import PersonalityImg from "../../assets/img/brand/personality.png";
 import PromiseImg from "../../assets/img/brand/promise.png";
 import ValuesImg from "../../assets/img/brand/values.png";
+import DpImg from "../../assets/img/brand/DesignPrinciples.png"
 import Card from "../common/Card";
 import arrowSign from "../../assets/img/arrow.png";
 
+const isMobile = window.innerWidth < 768;
 const BrandPage = () => {
   const CardData = [
     {
@@ -42,9 +44,18 @@ const BrandPage = () => {
       linkContent: "Explore",
       linkpath: "/ui-docs/brand/values",
     },
+    {
+      id: 5,
+      heading: "Design Principles",
+      Image: DpImg,
+      para: "Our values reflect the spirit with which DIGIT works to fulfill our promise.",
+      linkContent: "Explore",
+      linkpath: "/ui-docs/brand/designprinciples",
+    }
+
   ];
   return (
-    <div className="md:w-5/6 w-full mb-60">
+    <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "125%"} : {}}>
       <div className="pb-2">
         <Header>Brand</Header>
       </div>

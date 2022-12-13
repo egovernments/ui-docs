@@ -7,10 +7,18 @@ import {
   LinkButton,
 } from "@egovernments/digit-ui-react-components";
 import React from "react";
+import ButtonImg from "../../assets/img/all_fresh/Button.png"
+import ButtonGroupImg from "../../assets/img/all_fresh/ButtonGroup.png"
+import DefaultButton from "../../assets/img/all_fresh/DefaultButton.png"
+import DisableButton from "../../assets/img/all_fresh/DisableButton.png"
+import GroupButton from "../../assets/img/all_fresh/GroupButton.png"
+import MultiButton from "../../assets/img/all_fresh/MultiButton.png"
+import SecondaryButton from "../../assets/img/all_fresh/SecondaryButton.png"
 
+const isMobile = window.innerWidth < 768;
 const Buttons = () => {
   return (
-    <div className="md:w-5/6 w-full mb-60">
+    <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
       <div className="mb-4">
         <Header>Button</Header>
       </div>
@@ -24,17 +32,8 @@ const Buttons = () => {
         </p>
       </div>
       <Card className="py-4">
-        <ButtonSelector label="Button" />
+        <img src={ButtonImg} alt="Button" className="h-12 w-25" />
       </Card>
-      <div className="sm:w-3/5 w-full py-4">
-        <h2 className="2xl:text-3xl xl:text-3xl md:text-2xl sm:text-lg font-bold">
-          Guidelines
-        </h2>
-        <p className="2xl:text-lg sm:text-sm">
-          The guidelines below specify how buttons should be designed and
-          deployed on the DIGIT platform.
-        </p>
-      </div>
       <div className="sm:w-3/5 w-full py-4">
         <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
           When to Apply
@@ -87,26 +86,51 @@ const Buttons = () => {
           </li>
         </ul>
       </div>
-      <Card className="py-4 bg-card_button_bg">
-          <div className="flex w-64 py-4 justify-between">
-            <ButtonSelector label="Button" />
-            <ButtonSelector label="Button" style={{background : "#F47738", boxShadow : "inset 0px -2px 0px #0B0C0C"}} />
-          </div>
-          <div className="flex w-64 py-4 justify-between">
-            <ButtonSelector label="Button" style={{background : "#F47738", boxShadow : "inset 0px -2px 0px #0B0C0C", opacity : "0.5"}} />
-            <ButtonSelector label="Button" style={{background : "#F47738", boxShadow : "inset 0px -2px 0px #0B0C0C", opacity : "0.5"}} />
-          </div>
-      </Card>
       <div className="sm:w-3/5 w-full py-4">
-        <p className="py-4"><b> Default Buttons -</b> These buttons are used for the primary call to action item on the page. Make sure you include only one default button on a single page for clarity and efficacy.</p>
-        <p className="py-4"><b>Start Buttons - </b> These buttons redirect users to the concerned application page and usually initiate a transaction or process.</p>
-        <p className="py-4"><b>Secondary Buttons -</b> These buttons offer users the option to perform actions or sub-tasks that are part of the main action. Avoid multiple secondary buttons on a page to avoid user confusion. Make sure these buttons are added to simplify the user journey instead of complicating it. </p>
-        <p className="py-4"><b>Secondary Buttons - </b> These buttons are used to trigger actions that cannot be easily undone. Hence, it is a good practice to add a confirmation message screen or warning text that is visible to the user once they click on the warning button. The action is performed only after the user confirms it.</p>
-        <p className="py-4"> The warning buttons should be used only where required. Refer to the button design and colour specifications to ensure visual consistency across the platform</p>
-        <p className="py-4"> <b> Disable Buttons - </b> Use these buttons only if required as they can confuse users.</p>
-        <p className="py-4"><b> Grouping Buttons - </b> Align 2 or more buttons as groups to make it easier for users to understand the action alternatives available.</p>
-      </div>
+          <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold pb-4">
+            Button Types
+          </h2>
+          <div className="2xl:text-lg sm:text-md">
+           <b> Default Buttons -</b> These buttons are used for the primary call to action item on the page. Make sure you include only one default button on a single page for clarity and efficacy.
+            </div>
+        </div>
+        <Card className="py-4">
+          <img src={DefaultButton} alt="DefaultButton" className="h-12 w-25"  />
+        </Card>
+        <div className="sm:w-3/5 w-full py-4">
+          <div className="2xl:text-lg sm:text-md">
+           <b> Secondary Buttons -</b> These buttons offer users the option to perform actions or sub-tasks that are part of the main action. Avoid multiple secondary buttons on a page to avoid user confusion. Make sure these buttons are added to simplify the user journey instead of complicating it. 
+            </div>
+        </div>
+        <Card className="py-4">
+          <img src={SecondaryButton} alt="SecondaryButton" className="h-4 w-25" />
+        </Card>
+        <div className="sm:w-3/5 w-full py-4">
+          <div className="2xl:text-lg sm:text-md">
+           <b> Multiple Action Buttons -</b> These buttons offer users the option to choose from multiple actions from a single button.
+            </div>
+        </div>
+        <Card className="py-4">
+          <img src={MultiButton} alt="MultiButton" className="h-28 w-30" />
+        </Card>
+        <div className="sm:w-3/5 w-full py-4">
+          <div className="2xl:text-lg sm:text-md">
+           <b> Disable Buttons -</b> Use these buttons only if required as they can confuse users. 
+            </div>
+        </div>
+        <Card className="py-4">
+          <img src={DisableButton} alt="DisableButton" className="h-12 w-25" />
+        </Card>
+        <div className="sm:w-3/5 w-full py-4">
+          <div className="2xl:text-lg sm:text-md">
+           <b> Grouping Buttons -</b> Align 2 or more buttons as groups to make it easier for users to understand the action alternatives available.
+            </div>
+        </div>
+        <Card className="py-4">
+          <img src={GroupButton} alt="GroupButton" className="h-12 w-25" />
+        </Card>
     </div>
+    
   );
 };
 
