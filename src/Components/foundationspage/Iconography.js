@@ -33,7 +33,7 @@ const Iconography = () => {
         <h2 className="sm:text-xl font-bold">Overview</h2>
         <p className="md:text-xs lg:text-sm 2xl:text-base">
         Icons in the DIGIT act as visual aids to help users complete tasks.  We are using the amazing     <Link 
-                    to='//mui.com/material-ui/material-icons/' 
+                    to='//fonts.google.com/icons/' 
                     className="text-border xl:text-base md:text-sm sm:text-xs flex items-center "target="_blank" 
                   >  Google Material icon library </Link>
         </p>
