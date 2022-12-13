@@ -80,7 +80,6 @@ const ErrorMessage = () => {
           <li className="py-2">
             Use specific message text to make it relevant and helpful{" "}
           </li>
-
           <li className="py-2">
             Provide clear instructions and brief descriptions on what is
             required and the next steps
