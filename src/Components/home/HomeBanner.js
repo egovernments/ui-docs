@@ -6,8 +6,8 @@ const HomeBanner = () => {
   return (
     <>
       <Banner
-        heading="Design your service using DIGIT styles, components and patterns"
-        para="Use this design system to make your service consistent with DIGIT. Learn from the research and experience of other service teams and avoid repeating work that’s already been done."
+        heading="DIGIT design standards and principles that shape the UI experience across channels"
+        para="DIGIT Design System contains the inventory of reusable UI components, styles, patterns and resources required to build an application or portal. Access resources and information required to create interfaces that are visually consistent with the DIGIT platform"
         Image={BannerImg}
       />
     </>

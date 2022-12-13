@@ -1,40 +1,31 @@
 import { Card, DatePicker, Header } from '@egovernments/digit-ui-react-components'
 import React, { useState } from 'react'
+import DateInputImg from "../../assets/img/all_fresh/DateInput.png"
 
 const DateInput = () => {
     const [date, setDate] = useState(Date());
+    const isMobile = window.innerWidth < 768;
     const handleDate = (e) => {
         setDate(e)
     }
     return (
-        <div className="md:w-5/6 w-full mb-60">
+        <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
             <div className="pb-2">
                 <Header>Date Input</Header>
             </div>
             <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Overview</h2>
+                <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">Overview</h2>
                 <p className="md:text-xs lg:text-sm 2xl:text-base">
                     The Date Input component allows users to choose the relevant dates for specific queries or
                     user input fields. DIGIT design guidelines prescribe the use of a standardized date picker
                     component for use across all modules and screens.
                 </p>
             </div>
-            <div className="pb-4">
-                <Card className="py-4">
-                    <DatePicker
-                        date={date}
-                        name="permitDate"
-                        onChange={handleDate}
-                    />
+            
+                <Card className="card py-4">
+                    <img src={DateInputImg} alt="date" className="w-1/2" />
                 </Card>
-            </div>
-            <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Guidelines</h2>
-                <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    Follow the guidelines mentioned below to design and deploy the
-                    backlink component.
-                </p>
-            </div>
+            
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
                     When to Apply

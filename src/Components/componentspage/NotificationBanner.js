@@ -1,15 +1,16 @@
 import { Banner, Card, Header, InfoBanner } from '@egovernments/digit-ui-react-components'
 import React from 'react'
-import NotificationBannerImg from "../../assets/img/components/NotificationBanner.png"
+import NotificationBannerImg from "../../assets/img/all_fresh/NotificationBanner.png"
 
+const isMobile = window.innerWidth < 768;
 const NotificationBanner = () => {
     return (
-        <div className="md:w-5/6 w-full mb-60">
+        <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
             <div className="pb-2">
                 <Header>Notification Banner</Header>
             </div>
             <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Overview</h2>
+                <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">Overview</h2>
                 <p className="md:text-xs lg:text-sm 2xl:text-base">
                     The Notification Banner component is used to provide key information for all users. The
                     objective of this component is to draw the user attention to vital information that may not
@@ -17,19 +18,9 @@ const NotificationBanner = () => {
                     maintenance and the application may not function for a certain duration.
                 </p>
             </div>
-            <div className="pb-4">
-                <Card className="py-4">
-                    {/* <Banner /> */}
-                    <img src={NotificationBannerImg} alt="Notification Banner" />
-                </Card>
-            </div>
-            <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Guidelines</h2>
-                <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    Follow the guidelines below to design notification banners on DIGIT screens and
-                    applications.
-                </p>
-            </div>
+            <Card className="py-4">
+                    <img src={NotificationBannerImg} alt="Notification Banner" className="h-15 w-70" />
+            </Card>
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">
                     When to Apply

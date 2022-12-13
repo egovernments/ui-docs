@@ -3,7 +3,7 @@
 } */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   background-color: #f6fbff;
 }
 h1,
@@ -55,7 +55,7 @@ li {
 }
 
 .navbar-logo {
-  width: 132px;
+  width: 358px;
 }
 .home_banner {
   width: 537px;

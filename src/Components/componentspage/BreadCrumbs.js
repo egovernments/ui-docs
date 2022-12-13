@@ -4,25 +4,14 @@ import {
   Header,
 } from "@egovernments/digit-ui-react-components";
 import React from "react";
+import BreadCrumImg from "../../assets/img/all_fresh/Breadcrumb.png"
 
+const isMobile = window.innerWidth < 768;
 const BreadCrumbs = () => {
-  const crumbs = [
-    {
-      path: "/",
-      content: "Home",
-      show: true,
-    },
-    {
-      path: "/page1",
-      content: "page1",
-      show: true,
-    },
-  ];
   return (
-    <div className="md:w-5/6 w-full mb-60">
-      <BreadCrumb crumbs={crumbs} />
+    <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
       <div className="pb-2">
-        <Header>Bread Crumbs</Header>
+        <Header>Breadcrumbs</Header>
       </div>
       <div className="content_main">
         <div className="sm:w-3/5 w-full py-4">
@@ -38,17 +27,8 @@ const BreadCrumbs = () => {
       </div>
       <div className="py-b">
         <Card className="py-4">
-          <BreadCrumb crumbs={crumbs} />
+          <img src={BreadCrumImg} alt="Bread crumb" className="h-10 w-30" />
         </Card>
-      </div>
-      <div className="sm:w-3/5 w-full py-4">
-        <h2 className="2xl:text-3xl xl:text-3xl md:text-2xl sm:text-lg font-bold">
-          Guidelines
-        </h2>
-        <p className="2xl:text-lg sm:text-sm">
-          The guidelines below specify the DIGIT principles applied to the
-          design and deployment of the breadcrumbs component.
-        </p>
       </div>
       <div className="sm:w-3/5 w-full py-4">
         <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">

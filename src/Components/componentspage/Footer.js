@@ -1,8 +1,9 @@
 import { Card, Header, NavBar } from '@egovernments/digit-ui-react-components'
 import React from 'react'
-import FooterImg from "../../assets/img/components/Footer.png"
+import FooterImg from "../../assets/img/all_fresh/Footer.png"
 
 const Footer = () => {
+    const isMobile = window.innerWidth < 768;
     const menuItems =[
         {
             id : 1,
@@ -10,12 +11,12 @@ const Footer = () => {
         }
     ]
     return (
-        <div className="md:w-5/6 w-full mb-60">
+        <div className="md:w-5/6 w-full mb-60" style={isMobile ? {width: "200%"} : {}}>
             <div className="pb-2">
                 <Header>Footer</Header>
             </div>
             <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Overview</h2>
+                <h2 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">Overview</h2>
                 <p className="md:text-xs lg:text-sm 2xl:text-base">
                     The Footer component appears on the bottom section of every screen on the DIGIT
                     application. It contains information related to application copyright, contact and privacy.
@@ -23,15 +24,8 @@ const Footer = () => {
             </div>
             <div className="pb-4">
                 <Card className="py-4">
-                    <img src={FooterImg} alt="footer" />
+                <img src={FooterImg} alt="footer" className="h-5 w-40" />
                 </Card>
-            </div>
-            <div className="pb-4">
-                <h2 className="sm:text-xl font-bold">Guidelines</h2>
-                <p className="md:text-xs lg:text-sm 2xl:text-base">
-                    This section provides detailed information about how to use the Footer component across
-                    DIGIT screens and modules.
-                </p>
             </div>
             <div className="sm:w-3/5 w-full py-4">
                 <h3 className="2xl:text-2xl xl:text-2xl md:text-xl sm:text-sm font-bold">

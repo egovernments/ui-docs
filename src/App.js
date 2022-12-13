@@ -28,8 +28,6 @@ import PersonalityPage from "./Pages/brand/PersonalityPage";
 import PromisePage from "./Pages/brand/PromisePage";
 import ValuesPage from "./Pages/brand/ValuesPage";
 import ContentPage from "./Pages/content/ContentPage";
-import PatternsPage from "./Pages/patterns/PatternsPage";
-import ResourcesPage from "./Pages/resources/ResourcesPage";
 import BackLinksPage from "./Pages/components/BackLinksPage";
 import ErrorMessagePage from "./Pages/components/ErrorMessagePage";
 import DateInputPage from "./Pages/components/DateInputPage";
@@ -52,13 +50,203 @@ import TextAreaPage from "./Pages/components/TextAreaPage";
 import WarningTextPage from "./Pages/components/WarningTextPage";
 import ErrorSummaryPage from "./Pages/components/ErrorSummaryPage";
 import FieldSetPage from "./Pages/components/FieldSetPage";
-
+import DesignPrinciplesPage from "./Pages/brand/DesignPrinciplesPage";
+import FoundationsAccessibility from "./Pages/foundations/FoundationsAccessibility";
+import BrandingPage from "./Pages/brand/BrandingPage";
+import VoiceTonePage from "./Pages/content/VoiceTonePage"
+import LanguageSelection from "./Components/patterns/LanguageSelection";
+import CitySelection from "./Components/patterns/CitySelection"
+import MobileVerification from "./Components/patterns/MobileVerification";
+import DocumentRequired from "./Components/patterns/DocumentsRequired";
+import Address from "./Components/patterns/Address"
+import DocumentsUpload from "./Components/patterns/DocumentsUpload";
+import ApplicationSummary from "./Components/patterns/ApplicationSummary";
+import Payment from "./Components/patterns/Payment";
+import PaymentSuccess from "./Components/patterns/PaymentSuccess";
+import CollectFeedback from "./Components/patterns/CollectFeedback";
+import EmployeeCollectPayment from "./Components/patterns/EmployeeCollectPayment";
+import EmployeeLogin from "./Components/patterns/EmployeeLogin";
+import CounterEmployeeForm from "./Components/patterns/CounterEmployeeForm";
+import DashboardLanding from "./Components/patterns/DashboardLanding";
+import Search from "./Components/patterns/Search";
+import Dashboard from "./Components/patterns/Dashboard";
+import ResourcesOnePage from "./Components/resources/ResourcesOnePage";
+import ApplicationStatus from "./Components/patterns/ApplicationStatus";
+import EmployeeDashboard from "./Components/patterns/EmployeeDashboard";
+import EmployeeInbox from "./Components/patterns/EmployeeInbox";
+import Report from "./Components/patterns/Report";
 // import { Body, TopBar } from "@egov/digit-ui-react-components"; // for component use
 
 function App() {
   window.Digit = window.Digit || {};
 
-  return (
+  // return (
+  //   <>
+  //     <Router>
+  //       <Header />
+  //       <Switch>
+  //         <Route exact path="/ui-docs">
+  //           <Home />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components">
+  //           <Components />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/text-input">
+  //           <ComponentsTextInput />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/header">
+  //           <ComponentsHeader />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/input">
+  //           <Input />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/radio">
+  //           <RadioPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/checkbox">
+  //           <CheckboxPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/button">
+  //           <ButtonPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/banner">
+  //           <BannerPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/toast-message">
+  //           <ToastMessagePage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/text-area">
+  //           <TextAreaPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/warning-text">
+  //           <WarningTextPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/error-summary">
+  //           <ErrorSummaryPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/field-set">
+  //           <FieldSetPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/cards">
+  //           <CardsPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/breadcrumbs">
+  //           <BreadCrumbsPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/ratings">
+  //           <RatingPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/image-viewer">
+  //           <ImageViewerPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/number">
+  //           <NumbersPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/drop-down">
+  //           <DropDownsPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/upload-file">
+  //           <UploadFilesPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/backlink">
+  //           <BackLinksPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/error-message">
+  //           <ErrorMessagePage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/date-input">
+  //           <DateInputPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/footer">
+  //           <FooterPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/inset-text">
+  //           <InsetTextPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/notification-banner">
+  //           <NotificationBannerPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/panel">
+  //           <PanelPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/phase-banner">
+  //           <PhaseBannerPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/pagination">
+  //           <PaginationPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/select">
+  //           <SelectPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/radio-buttons">
+  //           <RadioButtonsPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/skip-link">
+  //           <SkipLinkPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/summary-list">
+  //           <SummaryListPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/table">
+  //           <TablePage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/tabs">
+  //           <TabsPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/tag">
+  //           <TagPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/side-nav">
+  //           <SideNavPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/components/pop-up">
+  //           <PopUpPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/foundations">
+  //           <Foundations />
+  //         </Route>
+  //         <Route exact path="/ui-docs/foundations/colors">
+  //           <FoundationsColor />
+  //         </Route>
+  //         <Route exact path="/ui-docs/foundations/typography">
+  //           <FoundationsTypography />
+  //         </Route>
+  //         <Route exact path="/ui-docs/foundations/iconography">
+  //           <FoundationsIconography />
+  //         </Route>
+  //         <Route exact path="/ui-docs/brand">
+  //           <Brand />
+  //         </Route>
+  //         <Route exact path="/ui-docs/brand/mission">
+  //           <MissionPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/brand/personality">
+  //           <PersonalityPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/brand/promise">
+  //           <PromisePage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/brand/values">
+  //           <ValuesPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/content">
+  //           <ContentPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/patterns">
+  //           <PatternsPage />
+  //         </Route>
+  //         <Route exact path="/ui-docs/resources">
+  //           <ResourcesPage />
+  //         </Route>
+  //         <Redirect to="/ui-docs/" />
+  //       </Switch>
+  //     </Router>
+  //   </>
+  // );
+
+  // Fixed extra exacts:
+
+   return (
     <>
       <Router>
         <Header />
@@ -69,154 +257,241 @@ function App() {
           <Route exact path="/ui-docs/components">
             <Components />
           </Route>
-          <Route exact path="/ui-docs/components/text-input">
+          <Route  path="/ui-docs/components/text-input">
             <ComponentsTextInput />
           </Route>
-          <Route exact path="/ui-docs/components/header">
+          <Route  path="/ui-docs/components/header">
             <ComponentsHeader />
           </Route>
-          <Route exact path="/ui-docs/components/input">
+          <Route  path="/ui-docs/components/input">
             <Input />
           </Route>
-          <Route exact path="/ui-docs/components/radio">
+          <Route  path="/ui-docs/components/radio">
             <RadioPage />
           </Route>
-          <Route exact path="/ui-docs/components/checkbox">
+          <Route  path="/ui-docs/components/checkbox">
             <CheckboxPage />
           </Route>
-          <Route exact path="/ui-docs/components/button">
+          <Route  path="/ui-docs/components/button">
             <ButtonPage />
           </Route>
-          <Route exact path="/ui-docs/components/banner">
+          <Route  path="/ui-docs/components/banner">
             <BannerPage />
           </Route>
-          <Route exact path="/ui-docs/components/toast-message">
+          <Route  path="/ui-docs/components/toast-message">
             <ToastMessagePage />
           </Route>
-          <Route exact path="/ui-docs/components/text-area">
+          <Route  path="/ui-docs/components/text-area">
             <TextAreaPage />
           </Route>
-          <Route exact path="/ui-docs/components/warning-text">
+          <Route  path="/ui-docs/components/warning-text">
             <WarningTextPage />
           </Route>
-          <Route exact path="/ui-docs/components/error-summary">
+          <Route  path="/ui-docs/components/error-summary">
             <ErrorSummaryPage />
           </Route>
-          <Route exact path="/ui-docs/components/field-set">
+          <Route  path="/ui-docs/components/field-set">
             <FieldSetPage />
           </Route>
-          <Route exact path="/ui-docs/components/cards">
+          <Route  path="/ui-docs/components/cards">
             <CardsPage />
           </Route>
-          <Route exact path="/ui-docs/components/breadcrumbs">
+          <Route  path="/ui-docs/components/breadcrumbs">
             <BreadCrumbsPage />
           </Route>
-          <Route exact path="/ui-docs/components/ratings">
+          <Route  path="/ui-docs/components/ratings">
             <RatingPage />
           </Route>
-          <Route exact path="/ui-docs/components/image-viewer">
+          <Route  path="/ui-docs/components/image-viewer">
             <ImageViewerPage />
           </Route>
-          <Route exact path="/ui-docs/components/number">
+          <Route  path="/ui-docs/components/number">
             <NumbersPage />
           </Route>
-          <Route exact path="/ui-docs/components/drop-down">
+          <Route  path="/ui-docs/components/drop-down">
             <DropDownsPage />
           </Route>
-          <Route exact path="/ui-docs/components/upload-file">
+          <Route  path="/ui-docs/components/upload-file">
             <UploadFilesPage />
           </Route>
-          <Route exact path="/ui-docs/components/backlink">
+          <Route  path="/ui-docs/components/backlink">
             <BackLinksPage />
           </Route>
-          <Route exact path="/ui-docs/components/error-message">
+          <Route  path="/ui-docs/components/error-message">
             <ErrorMessagePage />
           </Route>
-          <Route exact path="/ui-docs/components/date-input">
+          <Route  path="/ui-docs/components/date-input">
             <DateInputPage />
           </Route>
-          <Route exact path="/ui-docs/components/footer">
+          <Route  path="/ui-docs/components/footer">
             <FooterPage />
           </Route>
-          <Route exact path="/ui-docs/components/inset-text">
+          <Route  path="/ui-docs/components/inset-text">
             <InsetTextPage />
           </Route>
-          <Route exact path="/ui-docs/components/notification-banner">
+          <Route  path="/ui-docs/components/notification-banner">
             <NotificationBannerPage />
           </Route>
-          <Route exact path="/ui-docs/components/panel">
+          <Route  path="/ui-docs/components/panel">
             <PanelPage />
           </Route>
-          <Route exact path="/ui-docs/components/phase-banner">
+          <Route  path="/ui-docs/components/phase-banner">
             <PhaseBannerPage />
           </Route>
-          <Route exact path="/ui-docs/components/pagination">
+          <Route  path="/ui-docs/components/pagination">
             <PaginationPage />
           </Route>
-          <Route exact path="/ui-docs/components/select">
+          <Route  path="/ui-docs/components/select">
             <SelectPage />
           </Route>
-          <Route exact path="/ui-docs/components/radio-buttons">
+          <Route  path="/ui-docs/components/radio-buttons">
             <RadioButtonsPage />
           </Route>
-          <Route exact path="/ui-docs/components/skip-link">
+          <Route  path="/ui-docs/components/skip-link">
             <SkipLinkPage />
           </Route>
-          <Route exact path="/ui-docs/components/summary-list">
+          <Route  path="/ui-docs/components/summary-list">
             <SummaryListPage />
           </Route>
-          <Route exact path="/ui-docs/components/table">
+          <Route  path="/ui-docs/components/table">
             <TablePage />
           </Route>
-          <Route exact path="/ui-docs/components/tabs">
+          <Route  path="/ui-docs/components/tabs">
             <TabsPage />
           </Route>
-          <Route exact path="/ui-docs/components/tag">
+          <Route  path="/ui-docs/components/tag">
             <TagPage />
           </Route>
-          <Route exact path="/ui-docs/components/side-nav">
+          <Route  path="/ui-docs/components/side-nav">
             <SideNavPage />
           </Route>
-          <Route exact path="/ui-docs/components/pop-up">
+          <Route  path="/ui-docs/components/pop-up">
             <PopUpPage />
           </Route>
+
           <Route exact path="/ui-docs/foundations">
             <Foundations />
           </Route>
-          <Route exact path="/ui-docs/foundations/colors">
+          <Route  path="/ui-docs/foundations/colors">
             <FoundationsColor />
           </Route>
-          <Route exact path="/ui-docs/foundations/typography">
+          <Route  path="/ui-docs/foundations/typography">
             <FoundationsTypography />
           </Route>
-          <Route exact path="/ui-docs/foundations/iconography">
+          <Route  path="/ui-docs/foundations/iconography">
             <FoundationsIconography />
           </Route>
-          <Route exact path="/ui-docs/brand">
-            <Brand />
+          <Route  path="/ui-docs/foundations/accessibility">
+            <FoundationsAccessibility />
           </Route>
-          <Route exact path="/ui-docs/brand/mission">
+
+
+          <Route exact path="/ui-docs/brand">
+            <Redirect to="/ui-docs/brand/designprinciples" />
+          </Route>
+          {/* <Route  path="/ui-docs/brand/mission">
             <MissionPage />
           </Route>
-          <Route exact path="/ui-docs/brand/personality">
+          <Route  path="/ui-docs/brand/personality">
             <PersonalityPage />
           </Route>
-          <Route exact path="/ui-docs/brand/promise">
+          <Route  path="/ui-docs/brand/promise">
             <PromisePage />
           </Route>
-          <Route exact path="/ui-docs/brand/values">
+          <Route  path="/ui-docs/brand/values">
             <ValuesPage />
+          </Route> */}
+          <Route  path="/ui-docs/brand/designprinciples">
+            <DesignPrinciplesPage />
           </Route>
+           <Route  path="/ui-docs/brand/branding">
+            <BrandingPage />
+          </Route>
+
           <Route exact path="/ui-docs/content">
-            <ContentPage />
+            <Redirect to="/ui-docs/content/voicetone" />
           </Route>
+          <Route exact path="/ui-docs/content/voicetone">
+            <VoiceTonePage />
+          </Route>      
+
           <Route exact path="/ui-docs/patterns">
-            <PatternsPage />
+            <Redirect to="/ui-docs/patterns/pattern"/>
           </Route>
+          <Route  path="/ui-docs/patterns/pattern">
+            <LanguageSelection />
+          </Route>
+          <Route  path="/ui-docs/patterns/CitySelection">
+            <CitySelection />
+          </Route>
+          <Route  path="/ui-docs/patterns/MobileVerification">
+            <MobileVerification />
+          </Route>
+          <Route  path="/ui-docs/patterns/DocumentsRequired">
+            <DocumentRequired />
+          </Route>
+          <Route  path="/ui-docs/patterns/Address">
+            <Address />
+          </Route>
+          <Route  path="/ui-docs/patterns/ApplicationSummary">
+            <ApplicationSummary/>
+          </Route>
+          <Route  path="/ui-docs/patterns/Payment">
+            <Payment/>
+          </Route> 
+          <Route  path="/ui-docs/patterns/PaymentSuccess">
+            <PaymentSuccess/>
+          </Route>  
+          <Route  path="/ui-docs/patterns/DashboardLanding">
+            <DashboardLanding/>
+          </Route> 
+          <Route  path="/ui-docs/patterns/Dashboard">
+            <Dashboard/>
+          </Route> 
+          <Route  path="/ui-docs/patterns/DocumentsUpload">
+            <DocumentsUpload/>
+          </Route> 
+          <Route  path="/ui-docs/patterns/CounterEmployeeForm">
+            <CounterEmployeeForm/>
+          </Route> 
+          <Route  path="/ui-docs/patterns/CounterSearch">
+            <Search/>
+          </Route>
+          <Route  path="/ui-docs/patterns/ApplicationStatus">
+            <ApplicationStatus/>
+          </Route>
+          <Route  path="/ui-docs/patterns/CollectFeedback">
+            <CollectFeedback/>
+          </Route>
+          <Route  path="/ui-docs/patterns/EmployeeLogin">
+            <EmployeeLogin/>
+          </Route>
+          <Route  path="/ui-docs/patterns/EmployeeDashboard">
+            <EmployeeDashboard/>
+          </Route>
+          <Route  path="/ui-docs/patterns/EmployeeInbox">
+            <EmployeeInbox/>
+          </Route>
+          <Route  path="/ui-docs/patterns/Search">
+            <Search/>
+          </Route> 
+          <Route  path="/ui-docs/patterns/Report">
+            <Report/>
+          </Route>
+          <Route  path="/ui-docs/patterns/EmployeeCollectPayment">
+            <EmployeeCollectPayment/>
+          </Route>
+
+
           <Route exact path="/ui-docs/resources">
-            <ResourcesPage />
+            <Redirect to="/ui-docs/resources/resource"/>
           </Route>
-          <Redirect to="/ui-docs/" />
+          <Route  path="/ui-docs/resources/resource">
+            <ResourcesOnePage />
+          </Route>
+
+          <Redirect to="/ui-docs/" /> 
+          {/* Redirect if switch doesn't match with any of the above Routes */}
         </Switch>
       </Router>
     </>
