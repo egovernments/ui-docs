@@ -14,7 +14,7 @@ const ResourcesOne = () => {
       Image: GitIcon,
       para: "Open Source Urban Governance Digital Platform for Public Good",
       linkItem: "Explore",
-      link: "//github.com/egovernments/",
+      link: "//github.com/egovernments/DIGIT-Dev/tree/master/frontend/micro-ui/web/micro-ui-internals/packages/react-components",
     },
     {
       id: 2,
