@@ -37,23 +37,30 @@ const DesignPrinciples = () => {
         <li className='py-2'><h2 className='sm:text-xl font-bold'> Accessible </h2>Accessibility reflects how easy it is for different types of users to use your application. Is the design inclusive enough to accommodate non-tech savvy users or users with certain disabilities? Answers to these questions can promote your application adoption statistics. DIGIT design system applies the well-researched W3C standards to its interface design principles. Some of the basic accessibility standards applied in DIGIT include -
         <br />
         <br />
-        i. Grouped sections - Screen content is grouped in a way that ensures the linkages between sections are clear to users. The platform UI applies distinct heading styles and predictive text labels for clarity.<br />
-        ii. Meaningful labels - Short descriptive labels are used across forms and action fields to assist users and help them understand the purpose of the field. <br />
-        iii. Visual cues - The text colour on the foreground applies an adequate contrast ratio to the background colour to improve readability. <br />
-        iv. Interaction cues - The interactive elements on the screen make use of visible cues to identify the existing link states and indicate required user action. For instance, a link is highlighted in a different colour on mouseover. <br />
-        v. Navigation cues - Application navigation links follow a consistent style and naming convention on DIGIT screens. Clear headings and the use of breadcrumbs make sure users can switch screens easily. <br />
-        vi. Help cues - Use of question mark symbols adjacent to required fields routes the users to the contextual help text that opens as a small popup window. <br /><br />
+         <p class="font-bold"> Grouped sections </p> Screen content is grouped in a way that ensures the linkages between sections are clear to users. The platform UI applies distinct heading styles and predictive text labels for clarity.<br />
+         <br />
+         <p class="font-bold">Meaningful labels</p>  Short descriptive labels are used across forms and action fields to assist users and help them understand the purpose of the field. <br />
+         <br />
+         <p class="font-bold"> Visual cues </p>  The text colour on the foreground applies an adequate contrast ratio to the background colour to improve readability. <br />
+         <br />
+         <p class="font-bold"> Interaction cues </p> The interactive elements on the screen make use of visible cues to identify the existing link states and indicate required user action. For instance, a link is highlighted in a different colour on mouseover. <br />
+         <br />
+         <p class="font-bold">Navigation cues </p> Application navigation links follow a consistent style and naming convention on DIGIT screens. Clear headings and the use of breadcrumbs make sure users can switch screens easily. <br />
+         <br />
+         <p class="font-bold"> Help cues </p> Use of question mark symbols adjacent to required fields routes the users to the contextual help text that opens as a small popup window. <br /><br />
+         <br />
         </li>
         <li className='py-2'><h2 className='sm:text-xl font-bold'>Mobile-First</h2> DIGIT design cues apply the mobile-first approach to ensure increased user participation and adoption by all stakeholders. The following design principles define our focus on delivering a seamless UI experience to users across devices.
         <br/><br/>
-        i. Intuitive navigation - The interface design follows the rules of simplicity, consistency and clarity in the use of text, label and interactive elements. The use of visual cards and cues makes it easier for users to find their way around.<br />
-        ii. Content easy - The application interface use short, simple and easy to understand content labels to avoid visual clutter. Important bits of text are highlighted and appear on top to ensure users do not miss out on relevant details.<br />
-        iii. Single input screens - Each screen fetches or provides a single input detail only. The page header provides a clear indication of the input or information type displayed on that page. This ensures users know what is expected action on the specific screen.<br />
-        iv. Responsive layouts - The screen layouts follow the responsive design approach to ensure an optimized experience across devices and gadgets used to access applications. <br /><br />
+        <p class="font-bold">  Intuitive navigation  </p> The interface design follows the rules of simplicity, consistency and clarity in the use of text, label and interactive elements. The use of visual cards and cues makes it easier for users to find their way around.<br />
+        <br />
+        <p class="font-bold"> Content easy  </p> The application interface use short, simple and easy to understand content labels to avoid visual clutter. Important bits of text are highlighted and appear on top to ensure users do not miss out on relevant details.<br />   <br />
+        <p class="font-bold">  Single input screens  </p> Each screen fetches or provides a single input detail only. The page header provides a clear indication of the input or information type displayed on that page. This ensures users know what is expected action on the specific screen.<br />   <br />
+        <p class="font-bold"> Responsive layouts </p> The screen layouts follow the responsive design approach to ensure an optimized experience across devices and gadgets used to access applications. <br /><br />
         </li>
         <li><h2 className='sm:text-xl font-bold'>Localization</h2> Our interface is tuned to match the localized requirements of our users. The app screens, information, headers, notifications, and tracking details can be easily integrated with local language needs. Below are the key design principles that support our localization needs.<br/><br/>
-        i. Dynamic layouts - The DIGIT application screens use dynamic layouts that ensure optimized space for the display of content in local languages. <br />
-        ii.Localized fonts - The interface supports specific fonts that ensure seamless visibility of content in various languages.<br/><br/>
+        <p class="font-bold">Dynamic layouts </p> The DIGIT application screens use dynamic layouts that ensure optimized space for the display of content in local languages. <br />   <br />
+        <p class="font-bold"> Localized fonts </p> The interface supports specific fonts that ensure seamless visibility of content in various languages.<br/><br/>   <br />
         </li>
         <li><h2 className='sm:text-xl font-bold'>Data-Driven Design </h2> Our design principles are based on user experience data and research insights. Service prototypes go through stages of testing. Analytical insights help us identify user pain points and reimagine the interface design for improved adoption. This iterative process highlights the limitations of existing interface designs. 
         </li><br/>
