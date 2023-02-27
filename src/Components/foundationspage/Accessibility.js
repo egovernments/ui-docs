@@ -247,17 +247,18 @@ const Accessibility = () => {
           <p>
             These guidelines will help improve accessibility in your applications, but they don't guarantee a fully accessible experience. We also recommend you:
           <br/><br/>
-          test the entire application and journeys using various assistive technologies and text scaling
+          Test the entire application and journeys using various assistive technologies and text scaling
           <br/><br/>
 
-          include people with impairments when testing
+          Include people with impairments when testing
           <br/><br/>
 
-          ensure the tasks in your applications can be accomplished by anyone, regardless of ability
+          Ensure the tasks in your applications can be accomplished by anyone, regardless of ability
           <br/><br/>
 
-          When in doubt, refer to the <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noreferrer" className='text-red-400'> Web Content Accessibility Guidelines 2.1. </a>
+         <a href="https://cdnbbsr.s3waas.gov.in/s3c92a10324374fac681719d63979d00fe/uploads/2022/12/2022120981.pdf" target="_blank" rel="noreferrer"   className="text-border xl:text-base md:text-sm sm:text-xs  items-center" > Indian Government Accessibility Guidelines  </a>
           <br/><br/>
+          <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noreferrer"   className="text-border xl:text-base md:text-sm sm:text-xs flex items-center" > Web Content Accessibility Guidelines  </a>
           </p>
 
         </div>
@@ -265,7 +266,6 @@ const Accessibility = () => {
 
 
         {/* <h1 className="sm:text-2xl font-bold ">Guideline 1.1</h1><br/> */}
-
         {/* <table className="border-separate border">
           <thead>
           <tr>
