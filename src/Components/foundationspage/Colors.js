@@ -48,11 +48,12 @@ const Colors = () => {
       </div>
       <div className="pb-4">
         <h2 className="sm:text-xl font-bold">Contrast Aspect</h2>
-        <p className="md:text-xs lg:text-sm 2xl:text-base">
+        <p  className="md:text-xs lg:text-sm 2xl:text-base">
           Make sure that the contrast ratio of the text and other UI elements
-          meet the specifications outlined in the Web Content Accessibility
-          Guidelines (WCAG) 2.1.
+          meet the specifications outlined in the  <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum"  className="text-border xl:text-base md:text-sm sm:text-xs flex items-center"  target="blank">Web Content Accessibility
+          Guidelines (WCAG).</a>
         </p>
+        <a href="https://webaim.org/resources/contrastchecker/"   className="text-border xl:text-base md:text-sm sm:text-xs flex items-center"  target="blank">Contrast Checker Tool</a>
       </div>
       <div className="pb-4">
         <h2 className="sm:text-xl font-bold">Colour Aspect</h2>

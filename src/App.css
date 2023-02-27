@@ -6,6 +6,11 @@ body {
   font-family: "Roboto";
   background-color: #f6fbff;
 }
+header{
+  font-size: 30px !important;
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3,

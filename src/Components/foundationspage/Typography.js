@@ -16,6 +16,7 @@ import {
   MultiSelectDropdown,
 } from "@egovernments/digit-ui-react-components";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { desktopData, mobileData } from "./TypographyItem";
 
 const Typography = () => {
@@ -121,8 +122,10 @@ const Typography = () => {
         <h2 className="sm:text-xl font-bold">Font</h2>
         <ul className="list-disc list-inside">
           <li className="py-2">
-            All applications and services on the DIGIT platform must use the
-            Roboto Condensed and Roboto font.
+         All applications and services on the DIGIT platform must use the 
+
+          <a href="https://fonts.google.com/specimen/Roboto+Condensed" target="_blank" rel="noreferrer"   className="text-border xl:text-base md:text-sm sm:text-xs  items-center" >  Roboto Condensed </a>
+            and <a  href="https://fonts.google.com/specimen/Roboto"       className="text-border xl:text-base md:text-sm sm:text-xs  items-center" target="_blank">Roboto font.</a> 
           </li>
           <li className="py-2">
             {" "}
