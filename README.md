@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# DIGIT Design System — UI Docs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository hosts the source for the **DIGIT Design System documentation site** — a reference for designers and developers building on the [DIGIT](https://digit.org) platform by [eGov Foundation](https://egov.org.in).
 
-## Available Scripts
+The site covers the full design language: foundations (colour, typography, spacing, iconography), reusable UI components (atoms, molecules, organisms), and interaction patterns — all built for accessibility, responsiveness, and consistency across government digital services.
 
-In the project directory, you can run:
+## Live Site
 
-### `yarn start`
+The documentation is published via GitHub Pages on every push to `master`:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> **https://egovernments.github.io/ui-docs/**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## DIGIT UI Ecosystem
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Resource | Description | Link |
+|---|---|---|
+| **Design System Docs** (this repo) | Component specs, foundations, and design patterns | [egovernments.github.io/ui-docs](https://egovernments.github.io/ui-docs/) |
+| **Storybook** | Live interactive preview of every DIGIT UI component | [egovernments.github.io/DIGIT-UI-LIBRARIES](https://egovernments.github.io/DIGIT-UI-LIBRARIES/) |
+| **DIGIT UI Developer Docs** | Full platform documentation, guides, and API reference | [docs.digit.org/digit-ui](https://docs.digit.org/digit-ui/) |
+| **digit-ui-components** (npm) | React component library — install and use DIGIT components in your app | [@egovernments/digit-ui-components](https://www.npmjs.com/package/@egovernments/digit-ui-components) |
+| **digit-module-generator** (npm) | CLI scaffolding tool to bootstrap new DIGIT modules | [@egovernments/digit-module-generator](https://www.npmjs.com/package/@egovernments/digit-module-generator) |
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Using DIGIT UI in Your Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Install the component library
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install @egovernments/digit-ui-components
+```
 
-### `yarn eject`
+Import and use components in your React application:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```jsx
+import { Button, TextInput } from '@egovernments/digit-ui-components';
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Scaffold a new module
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npx @egovernments/digit-module-generator
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This CLI walks you through generating a new DIGIT module with the correct folder structure, routing, and configuration.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## What's in This Repo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+ui-docs/
+├── index.html                        # Homepage
+├── docs/
+│   ├── getting-started/              # Designer & developer onboarding
+│   ├── foundation/                   # Colour, typography, spacing, radius, icons
+│   ├── components/                   # Atoms, molecules, and component pages
+│   └── patterns/                     # Form, inbox, and summary patterns
+├── assets/
+│   ├── css/styles.css                # Global styles
+│   ├── js/                           # Sidebar, search, theme, navigation
+│   ├── previews/                     # Component preview images
+│   └── images/                       # Page illustrations and diagrams
+├── .github/workflows/pages.yml       # GitHub Actions — deploys to GitHub Pages on push to master
+└── CODEOWNERS                        # Code ownership configuration
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Local Development
 
-### Analyzing the Bundle Size
+This is a static HTML site — no build step required.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Clone the repo:
 
-### Making a Progressive Web App
+```bash
+git clone https://github.com/egovernments/ui-docs.git
+cd ui-docs
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Serve locally with any static file server, for example:
 
-### Advanced Configuration
+```bash
+npx serve .
+# or
+python3 -m http.server 8080
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Open `http://localhost:8080` in your browser.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Deployment
 
-### `yarn build` fails to minify
+The site deploys automatically via the GitHub Actions workflow at `.github/workflows/pages.yml` on every push to `master`. No manual deployment is needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Contributing
+
+Please read the [Content Standard](docs/getting-started/content-standard.html) before contributing new pages. For code ownership, see [CODEOWNERS](CODEOWNERS).
+
+---
+
+## License
+
+All content on this site by eGov Foundation is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
