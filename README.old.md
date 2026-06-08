@@ -1,2 +1,0 @@
-# ui-docs
-UI Docs
