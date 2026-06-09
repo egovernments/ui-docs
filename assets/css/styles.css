@@ -161,6 +161,14 @@ input[type="search"]::-webkit-search-decoration {
   box-shadow: 0 4px 12px rgba(0,0,0,.06);
 }
 
+/* ─── 12a. Color palette card hover ──────────────────────────────────────────*/
+.color-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.color-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
 /* ─── 13. Hero gradient (homepage) ───────────────────────────────────────────*/
 .hero-gradient {
   background:
@@ -542,12 +550,11 @@ main#main-content section { margin-bottom: 3rem; }
    These pages use structural selectors instead of scroll-mt-24, so the
    section.scroll-mt-24 rule in §35 doesn't apply. Force 96px to match
    component docs. The existing `main#main-content section { mb: 3rem }` rule
-   (§29) overrides Tailwind mb-* classes to 48px — we need !important here.  */
+   (§29) overrides Tailwind mb-* classes to 48px — we need !important here.
+   Foundation pages (digit-colours, spacing-system, etc.) intentionally omitted
+   so they fall back to the 3rem base rule, matching design-approach.html.     */
 #localisation, #ux-copy, #pre-ship-checklist,
-#principles, #checkpoints, #in-practice,
-#digit-colours, #usage-guidelines,
-#spacing-system,
-#typefaces, #typography-components, #line-height {
+#principles, #checkpoints, #in-practice {
   margin-bottom: 6rem !important;
 }
 
@@ -597,4 +604,14 @@ main#main-content section { margin-bottom: 3rem; }
   main#main-content { padding-left: 1rem; padding-right: 1rem; }
   .prop-table { font-size: 12px; }
   .prop-table th, .prop-table td { padding: 8px 10px; }
+}
+
+/* ── Vertical connector line (hub diagram) ────────────────────── */
+.vertical-line-connector {
+  width: 0;
+  border-left: 2px dashed rgba(99,102,241,0.35);
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
