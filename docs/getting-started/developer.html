@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=JetBrains+Mono:wght@400;500&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <script>
     window.tailwind = { config: {
@@ -60,7 +60,7 @@
     .step-cta {
       display: inline-flex; align-items: center; gap: 6px;
       margin-top: 14px; padding: 0;
-      font-size: 14px; font-weight: 600;
+      font-size: 16px; font-weight: 600;
       color: #0E165D; background: none; border: none;
       text-decoration: underline;
       text-underline-offset: 3px;
@@ -88,7 +88,7 @@
       border: 1px solid rgba(229,231,235,.9);
       border-radius: 20px;
       padding: 32px;
-      width: 100%; max-width: 580px;
+      width: 100%; max-width: 700px;
       box-shadow: 0 8px 32px rgba(0,0,0,.14), 0 2px 8px rgba(0,0,0,.08);
       animation: popIn .22s cubic-bezier(.4,0,.2,1);
       position: relative;
@@ -125,12 +125,15 @@
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 12px; flex-shrink: 0;
     }
-    .dest-title { font-size: 14px; font-weight: 700; color: #111827; margin-bottom: 4px; }
-    .dest-desc  { font-size: 12px; color: #6B7280; line-height: 1.5; }
+    .dest-title { font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 4px; font-family: 'DM Sans', sans-serif; }
+    .dest-desc  { font-size: 12px; color: #6B7280; line-height: 1.5; font-family: 'Open Sans', sans-serif; font-weight: 400; }
     .dest-arrow {
       margin-top: auto; padding-top: 12px;
-      font-size: 12px; font-weight: 600; color: #0E165D;
+      font-size: 14px; font-weight: 600; color: #0E165D;
       display: flex; align-items: center; gap: 4px;
+      font-family: 'DM Sans', sans-serif;
+      text-decoration: underline;
+      white-space: nowrap;
     }
   </style>
 
@@ -159,14 +162,14 @@
 
   <!-- Main -->
   <main id="main-content" class="flex-1 min-w-0 lg:ml-64 xl:ml-72 px-8 sm:px-12 py-14">
-    <div class="max-w-3xl page-content">
+    <div class="max-w-4xl page-content">
 
       <!-- Hero -->
-      <h1 class="text-[28px] sm:text-[36px] font-bold mb-4 text-[#0E165D] leading-[1.18] tracking-[-0.022em]">
-        Get Started as a Developer
+      <h1 class="text-[36px] font-bold mb-4 text-[#0E165D] leading-[1.18] tracking-[-0.022em]" style="font-family: 'DM Sans', sans-serif;">
+        Explore as a Developer
       </h1>
-      <p class="text-[17px] text-[#6B7280] leading-relaxed mb-14 max-w-2xl">
-        Follow these steps to understand the DIGIT UI ecosystem and start building consistent, scalable applications.
+      <p class="text-[18px] text-[#6B7280] leading-relaxed mb-12 max-w-3xl" style="font-family: 'Open Sans', sans-serif; font-weight: 400;">
+        If you're just starting out developing with DIGIT UI, you're in the right place. Here's a step-by-step journey to help you start building with DIGIT.
       </p>
 
       <!-- Vertical Stepper -->
@@ -179,10 +182,10 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <h3 class="text-[18px] font-bold text-[#111827] leading-snug">
+            <h3 class="text-[18px] font-semibold text-[#111827] mb-2">
               Understand DIGIT UI Architecture
             </h3>
-            <p class="text-[#6B7280] text-[15px] leading-relaxed mt-2">
+            <p class="text-[#6B7280] text-[16px] leading-relaxed" style="font-family: 'Open Sans', sans-serif; font-weight: 400;">
               Learn how DIGIT UI is structured, including its architecture, application patterns,
               reusable modules, and key platform capabilities.
             </p>
@@ -202,10 +205,10 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <h3 class="text-[18px] font-bold text-[#111827] leading-snug">
+            <h3 class="text-[18px] font-semibold text-[#111827] mb-2">
               Learn About the DIGIT Design System
             </h3>
-            <p class="text-[#6B7280] text-[15px] leading-relaxed mt-2">
+            <p class="text-[#6B7280] text-[16px] leading-relaxed" style="font-family: 'Open Sans', sans-serif; font-weight: 400;">
               Understand the foundations, components, patterns, accessibility standards, and design principles that drive consistent experiences.
             </p>
             <button onclick="openModal()" class="step-cta">
@@ -222,10 +225,10 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <h3 class="text-[18px] font-bold text-[#111827] leading-snug">
+            <h3 class="text-[18px] font-semibold text-[#111827] mb-2">
               Preview Components in Storybook
             </h3>
-            <p class="text-[#6B7280] text-[15px] leading-relaxed mt-2">
+            <p class="text-[#6B7280] text-[16px] leading-relaxed" style="font-family: 'Open Sans', sans-serif; font-weight: 400;">
               Explore available components, their variants, props, states, and usage guidelines before implementation.
             </p>
             <a href="https://egovernments.github.io/DIGIT-UI-LIBRARIES/"
@@ -244,13 +247,13 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <h3 class="text-[18px] font-bold text-[#111827] leading-snug">
+            <h3 class="text-[18px] font-semibold text-[#111827] mb-2">
               Install the UI Components Library
             </h3>
-            <p class="text-[#6B7280] text-[15px] leading-relaxed mt-2">
+            <p class="text-[#6B7280] text-[16px] leading-relaxed" style="font-family: 'Open Sans', sans-serif; font-weight: 400;">
               Add DIGIT UI components to your React application via npm. The package provides all atoms and molecules from this design system as production-ready React components.
             </p>
-            <pre class="mt-3 bg-[#F8F9FC] border border-[#E5E7EB] rounded-lg px-4 py-3 font-mono text-[13px] text-[#111827] overflow-x-auto"><code>npm install @egovernments/digit-ui-components</code></pre>
+            <pre class="mt-3 bg-[#F8F9FC] border border-[#E5E7EB] rounded-lg px-4 py-3 font-mono text-[14px] text-[#111827] overflow-x-auto"><code>npm install @egovernments/digit-ui-components</code></pre>
             <a href="https://www.npmjs.com/package/@egovernments/digit-ui-components"
                target="_blank" rel="noopener noreferrer"
                class="step-cta">
@@ -267,10 +270,10 @@
             <div class="step-line"></div>
           </div>
           <div class="step-body">
-            <h3 class="text-[18px] font-bold text-[#111827] leading-snug">
+            <h3 class="text-[18px] font-semibold text-[#111827] mb-2">
               Explore Predefined Screens
             </h3>
-            <p class="text-[#6B7280] text-[15px] leading-relaxed mt-2">
+            <p class="text-[#6B7280] text-[16px] leading-relaxed" style="font-family: 'Open Sans', sans-serif; font-weight: 400;">
               Review ready-to-use screen templates and reference implementations to understand
               how components come together in real-world workflows.
             </p>
@@ -289,13 +292,13 @@
             <div class="step-circle">6</div>
           </div>
           <div class="step-body">
-            <h3 class="text-[18px] font-bold text-[#111827] leading-snug">
+            <h3 class="text-[18px] font-semibold text-[#111827] mb-2">
               Scaffold a New Module
             </h3>
-            <p class="text-[#6B7280] text-[15px] leading-relaxed mt-2">
+            <p class="text-[#6B7280] text-[16px] leading-relaxed" style="font-family: 'Open Sans', sans-serif; font-weight: 400;">
               Use the DIGIT Module Generator to bootstrap new modules with the correct folder structure, routing, and configuration out of the box.
             </p>
-            <pre class="mt-3 bg-[#F8F9FC] border border-[#E5E7EB] rounded-lg px-4 py-3 font-mono text-[13px] text-[#111827] overflow-x-auto"><code>npx @egovernments/digit-module-generator</code></pre>
+            <pre class="mt-3 bg-[#F8F9FC] border border-[#E5E7EB] rounded-lg px-4 py-3 font-mono text-[14px] text-[#111827] overflow-x-auto"><code>npx @egovernments/digit-module-generator</code></pre>
             <a href="https://www.npmjs.com/package/@egovernments/digit-module-generator"
                target="_blank" rel="noopener noreferrer"
                class="step-cta">
@@ -324,17 +327,9 @@
       </svg>
     </button>
 
-    <!-- Modal header -->
-    <div class="inline-flex items-center px-2.5 py-1 rounded-full mb-4
-      text-[10px] font-bold tracking-[.12em] uppercase
-      bg-[#EEF1FF] text-[#0E165D]">DIGIT Design System</div>
-
-    <h2 id="modal-title" class="text-[20px] font-bold text-[#111827] leading-snug mb-1">
+    <h2 id="modal-title" class="text-[20px] font-bold text-[#111827] leading-snug mb-1" style="font-family: 'DM Sans', sans-serif;">
       Where would you like to explore?
     </h2>
-    <p class="text-[14px] text-[#6B7280] leading-relaxed">
-      Choose a section to navigate to.
-    </p>
 
     <!-- Three destination cards -->
     <div class="dest-grid">

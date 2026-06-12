@@ -28,12 +28,14 @@ DIGIT.sidebar = (function () {
   // ── Navigation structure (matches React MENUS + dropdown items) ──────────
   function buildMenus(root) {
     return {
+      explore: [
+        { label: 'Designer',  path: root + 'docs/getting-started/designer.html',  icon: 'image', section: 'getting-started', page: 'designer'  },
+        { label: 'Developer', path: root + 'docs/getting-started/developer.html', icon: 'code2', section: 'getting-started', page: 'developer' },
+      ],
       gettingStarted: [
-        { label: 'Designer',         path: root + 'docs/getting-started/designer.html',         icon: 'image',          section: 'getting-started', page: 'designer'         },
-        { label: 'Developer',        path: root + 'docs/getting-started/developer.html',        icon: 'code2',          section: 'getting-started', page: 'developer'        },
-        { label: 'Design Approach',  path: root + 'docs/getting-started/design-approach.html', icon: 'bookOpen',       section: 'getting-started', page: 'design-approach'  },
-        { label: 'Inclusive Design', path: root + 'docs/getting-started/inclusive-design.html',icon: 'userPlus',       section: 'getting-started', page: 'inclusive-design' },
-        { label: 'Content Standard', path: root + 'docs/getting-started/content-standard.html',icon: 'fileText',       section: 'getting-started', page: 'content-standard' },
+        { label: 'Design Approach',  path: root + 'docs/getting-started/design-approach.html', icon: 'bookOpen', section: 'getting-started', page: 'design-approach'  },
+        { label: 'Inclusive Design', path: root + 'docs/getting-started/inclusive-design.html', icon: 'userPlus', section: 'getting-started', page: 'inclusive-design' },
+        { label: 'Content Guidelines', path: root + 'docs/getting-started/content-standard.html', icon: 'fileText', section: 'getting-started', page: 'content-standard' },
       ],
       foundation: [
         { label: 'Color Palette', path: root + 'docs/foundation/color.html',      section: 'foundation', page: 'color'      },
@@ -107,12 +109,13 @@ DIGIT.sidebar = (function () {
       { title: 'Form',             category: 'Patterns',        path: root + 'docs/patterns/form.html'          },
       { title: 'Inbox',            category: 'Patterns',        path: root + 'docs/patterns/inbox.html'         },
       { title: 'Summary',          category: 'Patterns',        path: root + 'docs/patterns/summary.html'       },
+      // Explore
+      { title: 'Designer',  category: 'Explore', path: root + 'docs/getting-started/designer.html'  },
+      { title: 'Developer', category: 'Explore', path: root + 'docs/getting-started/developer.html' },
       // Getting Started
-      { title: 'Designer',         category: 'Getting Started', path: root + 'docs/getting-started/designer.html'          },
-      { title: 'Developer',        category: 'Getting Started', path: root + 'docs/getting-started/developer.html'         },
-      { title: 'Design Approach',  category: 'Getting Started', path: root + 'docs/getting-started/design-approach.html'   },
-      { title: 'Content Standard', category: 'Getting Started', path: root + 'docs/getting-started/content-standard.html'  },
       { title: 'Inclusive Design', category: 'Getting Started', path: root + 'docs/getting-started/inclusive-design.html'  },
+      { title: 'Design Approach',  category: 'Getting Started', path: root + 'docs/getting-started/design-approach.html'   },
+      { title: 'Content Guidelines', category: 'Getting Started', path: root + 'docs/getting-started/content-standard.html'  },
     ];
   }
 
@@ -132,7 +135,7 @@ DIGIT.sidebar = (function () {
     var cls    = active
       ? 'bg-[#EEF1FF] text-[#0E165D] font-medium'
       : 'text-[#4B5563] hover:bg-[#F5F7FB] hover:text-[#111827] font-normal';
-    var iconCls = active ? 'text-[#0E165D]' : 'text-[#9CA3AF]';
+    var iconCls = active ? 'text-[#0E165D]' : 'text-[#6B7280]';
     return '<a href="' + item.path + '" class="flex items-center gap-2 px-2.5 py-[7px] rounded-md mb-px transition-colors ' + cls + '">' +
       (item.icon ? '<span class="shrink-0 ' + iconCls + '">' + IC[item.icon] + '</span>' : '') +
       '<span class="flex-1 leading-snug" style="font-size:16px">' + item.label + '</span>' +
@@ -144,7 +147,7 @@ DIGIT.sidebar = (function () {
     var cls    = active
       ? 'bg-[#EEF1FF] text-[#0E165D] font-medium'
       : 'text-[#4B5563] hover:bg-[#F5F7FB] hover:text-[#111827] font-normal';
-    var iconCls = active ? 'text-[#0E165D]' : 'text-[#9CA3AF]';
+    var iconCls = active ? 'text-[#0E165D]' : 'text-[#6B7280]';
     return '<button type="button" data-key="' + key + '" class="w-full flex items-center gap-2 px-2.5 py-[7px] rounded-md mb-px transition-colors ' + cls + '">' +
       '<span class="shrink-0 ' + iconCls + '">' + IC[iconKey] + '</span>' +
       '<span class="flex-1 text-left leading-snug" style="font-size:16px">' + label + '</span>' +
@@ -195,9 +198,9 @@ DIGIT.sidebar = (function () {
 
           // Search ─────────────────────────────────────────────────────────
           '<div class="relative mb-5" id="sb-search-wrap">' +
-            '<span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-[#9CA3AF] pointer-events-none">' + IC.search + '</span>' +
+            '<span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-[#6B7280] pointer-events-none">' + IC.search + '</span>' +
             '<input id="sb-input" type="search" placeholder="Search" aria-label="Search documentation"' +
-              ' class="w-full bg-[#F4F5F7] rounded-lg pl-8 pr-3 py-[7px] text-[#111827] placeholder-[#6B7280] text-[13px] focus:outline-none focus:ring-1 focus:ring-[#0E165D] transition-shadow border border-[#E5E7EB] hover:border-[#D1D5DB]"' +
+              ' class="w-full bg-[#F4F5F7] rounded-lg pl-8 pr-3 py-[7px] text-[#111827] placeholder-[#6B7280] text-[14px] focus:outline-none focus:ring-1 focus:ring-[#0E165D] transition-shadow border border-[#E5E7EB] hover:border-[#D1D5DB]"' +
               ' autocomplete="off" spellcheck="false"/>' +
             '<div id="sb-results" class="hidden absolute top-full left-0 right-0 mt-1.5 bg-white rounded-lg shadow-lg border border-[#E5E7EB] overflow-hidden max-h-[280px] overflow-y-auto z-50"></div>' +
           '</div>' +
@@ -208,12 +211,16 @@ DIGIT.sidebar = (function () {
             '<span class="leading-snug" style="font-size:16px">Home</span>' +
           '</a>' +
 
+          // Explore ─────────────────────────────────────────────────────────
+          '<div class="mt-5 mb-1"><p class="font-semibold uppercase px-2.5 leading-none" style="color:#6B7280;font-size:12px;letter-spacing:0.10em">Explore as</p></div>' +
+          menus.explore.map(navLink).join('') +
+
           // Getting Started ─────────────────────────────────────────────────
-          '<div class="mt-5 mb-1"><p class="font-semibold uppercase px-2.5 leading-none" style="color:#6B7280;font-size:11.5px;letter-spacing:0.10em">Getting Started</p></div>' +
+          '<div class="mt-5 mb-1"><p class="font-semibold uppercase px-2.5 leading-none" style="color:#6B7280;font-size:12px;letter-spacing:0.10em">Get Started</p></div>' +
           menus.gettingStarted.map(navLink).join('') +
 
           // Design System ───────────────────────────────────────────────────
-          '<div class="mt-5 mb-1"><p class="font-semibold uppercase px-2.5 leading-none" style="color:#6B7280;font-size:11.5px;letter-spacing:0.10em">Design System</p></div>' +
+          '<div class="mt-5 mb-1"><p class="font-semibold uppercase px-2.5 leading-none" style="color:#6B7280;font-size:12px;letter-spacing:0.10em">Design System</p></div>' +
 
           // Foundation
           '<div class="mb-1">' +
@@ -357,12 +364,80 @@ DIGIT.sidebar = (function () {
     });
   }
 
+  // ── Mobile nav injection ─────────────────────────────────────────────────
+  function injectMobileNav() {
+    if (document.getElementById('mob-drawer')) return;
+
+    var MENU_SVG  = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+    var CLOSE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+
+    var btn = document.createElement('button');
+    btn.id = 'mob-hamburger';
+    btn.setAttribute('aria-label', 'Open navigation');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-controls', 'mob-drawer');
+    btn.innerHTML = MENU_SVG;
+
+    var overlay = document.createElement('div');
+    overlay.id = 'mob-overlay';
+    overlay.setAttribute('aria-hidden', 'true');
+
+    var drawer = document.createElement('nav');
+    drawer.id = 'mob-drawer';
+    drawer.setAttribute('role', 'dialog');
+    drawer.setAttribute('aria-modal', 'true');
+    drawer.setAttribute('aria-label', 'Site navigation');
+
+    var closeBtn = document.createElement('button');
+    closeBtn.id = 'mob-drawer-close';
+    closeBtn.setAttribute('aria-label', 'Close navigation');
+    closeBtn.innerHTML = CLOSE_SVG;
+
+    var contentMount = document.createElement('div');
+    contentMount.id = 'mob-sidebar-content';
+    contentMount.className = 'sidebar-scroll';
+
+    drawer.appendChild(closeBtn);
+    drawer.appendChild(contentMount);
+    document.body.appendChild(btn);
+    document.body.appendChild(overlay);
+    document.body.appendChild(drawer);
+
+    render(contentMount);
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      btn.setAttribute('aria-expanded', 'true');
+      closeBtn.focus();
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.focus();
+    }
+
+    btn.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+    contentMount.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A' && e.target.href) closeDrawer();
+    });
+  }
+
   // ── Public init ───────────────────────────────────────────────────────────
   function init() {
     var desktop = document.getElementById('sidebar-content');
     var mobile  = document.getElementById('mobile-sidebar-content');
     if (desktop) render(desktop);
     if (mobile)  render(mobile);
+    if (desktop) injectMobileNav();
   }
 
   return { init: init, render: render };
